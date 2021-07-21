@@ -1,0 +1,3 @@
+- 👋 Hi, I’m Michał
+- 👀 I’m interested in 
+- 🌱 I’m currently learning JAVA and manual testing.

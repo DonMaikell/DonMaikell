@@ -1,0 +1,80 @@
+mport java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+
+public class Zadanie1 {
+    public static void main(String[] args) {
+
+        String[] imiona = {"Tomek","Michał","Andrzej","Edyta","Justyna","Krzysztof","Józef","Aleksander","Ola","Magda"};
+
+        ArrayList<String> list1 = new ArrayList<>(Arrays.asList(imiona));
+
+        System.out.println("Ilość elementów w kolejce :" + list1.size());
+
+        System.out.println("Poszczególne elementy w liście :" + list1);
+
+
+        // Pobieranie 3 pierwszych i 3 ostatnich elementów
+
+        String[] pierwsze = {list1.get(0), list1.get(1),list1.get(2)};
+        System.out.println(Arrays.toString(pierwsze));
+        String[] ostatnie = {list1.get(9), list1.get(8), list1.get(7)};
+        System.out.println(Arrays.toString(ostatnie));
+
+        // wstaw nowy element na pozycji 5
+
+        list1.add(5,"Michał");
+        System.out.println(list1);
+
+
+
+        {
+            //d) Usuń z niej 3 pierwsze i 3 ostatnie elementy.
+            list1.remove(0);
+            list1.remove(1);
+            list1.remove(2);
+            list1.remove(7);
+            list1.remove(6);
+            list1.remove(5);
+            System.out.println(list1);
+        }
+
+        //e) Stwórz drugą listę zawierająca 6 nowych imion i dodaj ją do pierwszej listy.
+
+        String[] imie2 = {"Adam" , "Marcin","Juliusz", "Włodzimierz", "Mateusz"};
+
+        ArrayList<String> list2 = new ArrayList<>(Arrays.asList(imie2));
+
+        list1.addAll(list2);
+        System.out.println("Pierwsza lista + druga lista " + list1);
+
+        //f) Posortuj pierwsza listę alfabetycznie rosnąco, a następnie malejąco.
+
+        Collections.sort(list1);
+        System.out.println(list1);
+
+        Collections.reverse(list1);
+        System.out.println(list1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
